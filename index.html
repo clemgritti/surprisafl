@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet ANR - Accueil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            border-bottom: 3px solid #1a365d;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #1a365d;
+            margin: 0 0 10px 0;
+        }
+
+        h2 {
+            color: #2b6cb0;
+            margin-top: 40px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p><em>Projet financé par l'ANR (Réf: ANR-25-CE39-4801-01)</em></p>
+        <h1>SURPRISA-FL</h1>
+        <p>SUstainable, Robust, PRIvacy-preserving, Secure, Asynchronous Federated Learning</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Présentation</h2>
+            <p>L'apprentissage fédéré (FL) permet d'entraîner des modèles de Machine Learning de manière collaborative tout en préservant la confidentialité des données, en ne partageant que des mises à jour de modèles plutôt que des données brutes. 
+            Dans le cas de FL synchrone (SyncFL), un serveur central envoie un modèle global aux clients, qui l'entraînent avec leurs données locales et renvoient les mises à jour pour agrégation. Toutefois, ce processus expose les données à des risques, comme les attaques par inférence d'appartenance. Pour pallier cela, des techniques d'agrégation sécurisée (SA), telles que le chiffrement homomorphique (HE), sont utilisées. 
+            Néanmoins, le FL reste vulnérable aux clients cherchant à empoisonner le modèle global, engendrant des prédictions erronées. Des mécanismes de défense, tels que la détection d'anomalies et la limite de normes, sont utilisés pour contrer ces menaces, bien qu'ils soient gourmands en ressources. 
+            L'hétérogénéité des clients (en termes de stockage, de communication et de capacités de calcul) complique également le FL. Bien que le SyncFL tente d'y répondre via une sur-sélection, des inefficacités subsistent. Le FL asynchrone (AsyncFL) réduit certains de ces problèmes en traitant les mises à jour dès leur réception, mais il pose des défis de confidentialité, car la SA nécessite plusieurs entrées pour l'agrégation.   Le FL asynchrone avec buffer (Buffered AsyncFL) résout ces problèmes en stockant temporairement les entrées avant de mettre à jour le modèle. 
+            Enfin, le développement rapide du FL, moteur d'innovations dans des domaines tels que la médecine, entraîne une consommation énergétique importante. Assurer sa durabilité requiert des stratégies comme le fog computing et la réduction des communications entre clients et serveurs. 
+            SURPRISA-FL vise à relever ces défis en même temps garantissant confidentialité, robustesse, participation asynchrone et durabilité.</p>
+            <p><strong>Durée :</strong> 2026 - 2029<br>
+               <strong>Coordinatrise :</strong> Clémentine Gritti (CITI Lab @ INSA Lyon, Privatics @ Inria)</p>
+        </section>
+
+        <section>
+            <h2>Objectifs scientifiques</h2>
+               <p>Le cadre proposé, SURPRISA-FL, vise à répondre aux défis de confidentialité, de robustesse, d'asynchronisme et de durabilité dans l'apprentissage fédéré (FL). Les objectifs clés sont :</p>
+    <ul>
+        <li><strong>Préserver la confidentialité :</strong> Les mises à jour locales des clients doivent rester privées, garantissant que le serveur ne puisse pas accéder aux données individuelles. Des techniques d'agrégation sécurisée (SA), telles que le chiffrement homomorphe (HE) et le masquage, masqueront les mises à jour des clients, permettant ainsi au serveur de les agréger et de mettre à jour le modèle global sans exposer aucune mise à jour individuelle.</li>
+        <li><strong>Garantir la robustesse :</strong> Le modèle global doit être résilient face aux pannes byzantines, qui surviennent lorsque des clients malveillants manipulent les données ou perturbent le protocole. La robustesse peut être assurée en validant les mises à jour des clients par une comparaison croisée avec d'autres mises à jour ou avec un modèle de référence, éliminant ainsi les valeurs aberrantes (outliers) avant l'agrégation.</li>
+        <li><strong>Permettre l'asynchronisme :</strong> Les clients pourront entraîner le modèle à leur propre rythme et envoyer leurs mises à jour dès qu'elles seront disponibles. Un tampon (buffer) stockera ces mises à jour et déclenchera l'agrégation une fois rempli. Cette approche asynchrone permet aux clients de participer de manière flexible, répondant ainsi à l'hétérogénéité des clients sans ralentir l'ensemble du système.</li>
+        <li><strong>Garantir la durabilité :</strong> L'impact environnemental de la planification des clients, de l'entraînement local et des mises à jour du serveur doit être minimisé. Cela inclut une sélection rigoureuse des mécanismes de sécurité pour la confidentialité et la robustesse afin de réduire la consommation d'énergie, tout en garantissant des opérations d'apprentissage fédéré efficaces et sécurisées.</li>
+    </ul>
+</section>
+
+        <section>
+            <h2>Equipe:</h2>
+            <ul>
+              <li>Clémentine Gritti, CPJ (2024-2029)</li>
+              <li>Imane Elaceri, PFE (2026)</li>
+              <li>Maria Ghandour, doctorante (2026-2029)</li>
+
+            </ul>
+        </section>
+
+        <section>
+            <h2>Maria Ghandour</h2>
+            <ul>
+                <li>A venir</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Pour toute information, vous pouvez contacter l'équipe à l'adresse : <a href="clementine.gritti@insa-lyon.fr">clementine.gritti@insa-lyon.fr</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ce projet est soutenu par l'Agence Nationale de la Recherche (ANR).</p>
+    </footer>
+
+</body>
+</html>
+
